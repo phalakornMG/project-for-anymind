@@ -1,0 +1,179 @@
+body{
+  margin: 0;
+  padding: 25px;
+  font-family: 'Comfortaa', cursive;
+}
+.chatApp{
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: calc(100vh - 50px);
+  background-color: $grey;
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 100%;
+  }
+  .bar-left{
+    background: linear-gradient(90deg, #9A36D7 8.33%, #5D80D8 66.67%, rgba(42, 216, 237, 0.72) 100%);
+    color: $white;
+    .wrap{
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px 25px;
+      .main-title{
+        text-align: left;
+        margin-top: 0px;
+        h2{
+          margin: 0px;
+          margin-bottom: 10px;
+        }
+      }
+      .description{
+        text-align: left;
+      }
+    }
+    .block-left-field{
+      padding: 25px;
+      box-sizing: border-box;
+      .item{
+        margin-bottom: 25px;
+        .title{
+          h4{
+            margin: 0;
+            margin-bottom: 10px;
+            font-weight: 300;
+          }
+        }
+        select{
+          font-size: 16px;
+          background: rgba(255, 255, 255, 0.5);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          width: 100%;
+          padding: 7px;
+          font-family: 'Comfortaa', cursive;
+        }
+        .field{
+          .field-bt{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            cursor: pointer;
+            .button{
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              border-radius: 15px;
+              background: #b8b4ec;
+              background: rgba(255, 255, 255, 0.5);
+              position: relative;
+            }
+            span{
+              margin-left: 10px;
+            }
+            &.active{
+              .button{
+                &:before{
+                  content: "";
+                  content: "";
+                  width: 14px;
+                  height: 14px;
+                  border-radius: 20px;
+                  position: absolute;
+                  background-color: #5f8adb;
+                  left: 2.55px;
+                  top: 2.55px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .block-chat{
+    color: $font-black;
+    .section-top{
+      height: 85px;
+      padding: 25px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e2e1e1;
+      display: flex;
+      align-items: center;
+    }
+    .section-chat-messsage{
+      min-height: calc(100vh - 85px - 196px - 50px);
+      padding: 25px;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      .block-card-message{
+        max-height: calc(100vh - 400px);
+        overflow: scroll;
+        width: 100%;
+      }
+      .readMore{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-decoration: none;
+        color: $sky;
+        font-size: 14px;
+        .arrow {
+          border: solid $sky;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 3px;
+          margin-left: 5px;
+          &.up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+            margin-top: 3px;
+          }
+          &.down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            margin-bottom: 3px;
+          }
+        }
+        &.bottom{
+          bottom: 0;
+        }
+        &.top{
+          top: 10px;
+        }
+      }
+    }
+    .section-messsage-field{
+      padding: 25px;
+      textarea{
+        font-family: "Comfortaa", cursive;
+        height: 80px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #e2e2e2;
+        padding: 12px;
+        box-sizing: border-box;
+      }
+      .button{
+        background: linear-gradient(271.07deg, #5CC8F8 10.12%, #3173F7 90.68%);
+        color: white;
+        width: 150px;
+        padding: 13px;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 12px;
+        cursor: pointer;
+      }
+      .error{
+        color: red;
+        font-size: 14px;
+      }
+    }
+  }
+}

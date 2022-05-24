@@ -1,0 +1,51 @@
+.card-message{
+  display: flex;
+  align-items: end;
+  position: relative;
+  margin: 25px 0px;
+  .user{
+    img{
+      width: 50px;
+    }
+    .name{
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  .message{
+    position: relative;
+    font-size: 14px;
+    padding: 15px;
+    background-color: $sky;
+    color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    max-width: 50%;
+    line-height: 1.3;
+    @media screen and (max-width: 767px) {
+      max-width: 80%;
+    }
+    .time{
+      position: absolute;
+      bottom: -22px;
+      right: 0;
+      span{
+        font-size: 12px;
+        color: $font-black;
+      }
+    }
+  }
+  &.currentUser{
+    justify-content: flex-end;
+    .message{
+      margin-left: 0;
+      margin-right: 5px;
+      background-color: #7465d8;
+      .time{
+        left: 0;
+        right: unset;
+      }
+    }
+  }
+}
